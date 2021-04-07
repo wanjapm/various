@@ -9,9 +9,6 @@ def normal_shipping(weight):
     else:
         return (4.75 * weight) + flat_charge
 
-def premium_shipping():
-    return 125
-
 def drone_shipping(weight):
     if weight <= 2:
       return ( 4.5 * weight ) 
@@ -24,7 +21,7 @@ def drone_shipping(weight):
 
 weight = float(input("Please enter the weight of your package:>>"))
 normal = normal_shipping(weight)
-premium = premium_shipping()
+premium = 125
 drone = drone_shipping(weight)
 
 if normal < premium and normal < drone:
